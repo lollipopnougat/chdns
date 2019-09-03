@@ -9,7 +9,8 @@
         <span class="demonstration">默认 Hover 指示器触发</span>
         <el-carousel height="150px"
                      interval="3000"
-                     type="card">
+                     type="card"
+                     arrow="never">
           <el-carousel-item v-for="item in 4"
                             :key="item">
             <h3 class="small">{{ item }}</h3>
@@ -17,13 +18,11 @@
         </el-carousel>
       </div>
     </div>
-
-    <p> </p>
     <div class="pblock">
       <el-popover placement="top-start"
                   title="QQ迎新群   微信公众号"
                   width="520"
-                  trigger="hover">
+                  trigger="click">
         <div class="iblock">
           <img src="../assets/QQR.png"
                class="QR" />
@@ -40,7 +39,16 @@
     <p>全 </p>
     <p>协 </p>
     <p>会 </p>
-    <footer>2019 &copy; 长安大学网络安全协会 </footer>
+    <footer>
+      <el-tooltip class="item"
+                  effect="dark"
+                  content="作者是lnp"
+                  placement="top-start">
+        <span class="copyright">
+          2019 &copy; 长安大学网络安全协会
+        </span>
+      </el-tooltip>
+    </footer>
   </div>
 </template>
 
@@ -127,5 +135,9 @@ h2 {
   text-align: center;
   display: inline-block;
   width: 80%;
+}
+.copyright {
+  color: #475669;
+  font-size: 20px;
 }
 </style>

@@ -34,7 +34,7 @@
               <el-menu-item index="2-4">组织部</el-menu-item>
             </el-submenu>
             <el-menu-item index="3">
-              <a href="https://github.com"
+              <a href="https://github.com/lollipopnougat/chdns"
                  target="_blank">
                 <svg aria-labelledby="simpleicons-github-dark-icon"
                      lang=""
@@ -82,7 +82,7 @@ export default {
   margin: 0;
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 635px) {
   .logo {
     height: 100%;
     width: auto;
@@ -92,7 +92,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 620px) and (min-width: 412px) {
+@media screen and (max-width: 635px) and (min-width: 417px) {
   .logo {
     display: none;
   }
@@ -101,7 +101,7 @@ export default {
     width: auto;
   }
 }
-@media screen and (max-width: 412px){
+@media screen and (max-width: 417px){
   .logo {
     display: none;
   }
