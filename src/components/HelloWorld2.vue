@@ -2,10 +2,10 @@
   <el-container>
     <el-main>
       <div id="btn">
-        <el-button @click="visible = true">Button</el-button>
+        <el-button @click="visible = true">测试用</el-button>
         <el-dialog :visible.sync="visible"
                    title="Hello world">
-          <p>Try Element</p>
+          <p>网络安全协会主页</p>
         </el-dialog>
       </div>
     </el-main>

@@ -1,6 +1,6 @@
 # chdns
 
-> A Vue.js project
+> A project of CHDNS's website based on Vue.js
 
 ## Build Setup
 
