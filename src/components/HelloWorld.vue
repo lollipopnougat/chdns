@@ -5,7 +5,7 @@
     <ul>
       <li>
         <a
-          href="https://vuejs.org"
+          href="/hello"
           target="_blank"
         >
           Core Docs
@@ -88,10 +88,10 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+      msg: '欢迎访问'
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
