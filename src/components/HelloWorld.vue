@@ -6,7 +6,7 @@
          class="nmap" />
     <div class="pblock">
       <div class="block">
-        <span class="demonstration">默认 Hover 指示器触发</span>
+        <span class="demonstration">noting</span>
         <el-carousel height="150px"
                      interval="3000"
                      type="card"
@@ -44,9 +44,8 @@
                   effect="dark"
                   content="作者是lnp"
                   placement="top-start">
-        <span class="copyright">
-          2019 &copy; 长安大学网络安全协会
-        </span>
+        <span class="copyright"> 2019 &copy; 长安大学网络安全协会 Powered by <a href="https://vuejs.org/">Vue.js</a> & <a href="https://element.eleme.io/">Element UI</a></span>
+
       </el-tooltip>
     </footer>
   </div>
@@ -138,6 +137,13 @@ h2 {
 }
 .copyright {
   color: #475669;
-  font-size: 20px;
+  font-size: 12px;
+}
+
+a {
+  color:#606266;
+}
+a:hover {
+  color:#409EFF;
 }
 </style>
