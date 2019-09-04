@@ -7,7 +7,7 @@
             <img src="./assets/chdns-logo.png"
                  class="logo" />
             <img src="./assets/chdns-logos.png"
-                 class="logos"/>
+                 class="logos" />
           </a>
           <!--<span class="logo-headline">网络安全协会</span>
 
@@ -24,14 +24,15 @@
                    router-mode="horizontal"
                    class="el-menu-demo"
                    mode="horizontal"
+                   :router="true"
                    @select="handleSelect">
-            <el-menu-item index="1">首页</el-menu-item>
-            <el-submenu index="2">
+            <el-menu-item index="/Home">首页</el-menu-item>
+            <el-submenu index>
               <template slot="title">各部门</template>
-              <el-menu-item index="2-1">秘书处</el-menu-item>
-              <el-menu-item index="2-2">竞赛部</el-menu-item>
-              <el-menu-item index="2-3">宣传部</el-menu-item>
-              <el-menu-item index="2-4">组织部</el-menu-item>
+              <el-menu-item index="/Department?d=first">秘书处</el-menu-item>
+              <el-menu-item index="/Department?d=second">竞赛部</el-menu-item>
+              <el-menu-item index="/Department?d=third">宣传部</el-menu-item>
+              <el-menu-item index="/Department?d=fouth">组织部</el-menu-item>
             </el-submenu>
             <el-menu-item index="3">
               <a href="https://github.com/lollipopnougat/chdns"
@@ -68,6 +69,13 @@ export default {
     handleSelect (key, keyPath) {
       console.log(key, keyPath);
     }
+  },
+  watch: {
+    $route: {
+      handler: function (val, oldVal) {
+        console.log(val);
+      }
+    }
   }
 };
 </script>
@@ -92,7 +100,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 635px) and (min-width: 417px) {
+@media screen and (max-width: 635px) and (min-width: 433px) {
   .logo {
     display: none;
   }
@@ -101,11 +109,14 @@ export default {
     width: auto;
   }
 }
-@media screen and (max-width: 417px){
+@media screen and (max-width: 433px) {
   .logo {
     display: none;
   }
   .logos {
+    display: none;
+  }
+  .github {
     display: none;
   }
 }
@@ -134,5 +145,17 @@ export default {
 }
 .el-main {
   padding: 0 !important;
+}
+
+a:hover {
+  color: #409eff;
+  text-decoration: underline;
+}
+a:link {
+  color: #909399;
+  text-decoration: none;
+}
+a:visited {
+  color: #909399;
 }
 </style>

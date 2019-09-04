@@ -8,7 +8,7 @@
       <div class="block">
         <span class="demonstration">noting</span>
         <el-carousel height="150px"
-                     interval="3000"
+                     :interval="3000"
                      type="card"
                      arrow="never">
           <el-carousel-item v-for="item in 4"
@@ -81,12 +81,12 @@ h2 {
   background-size: cover;
   left: 0;
   width: 100%;
-  height: 100%;
   zoom: 1;
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
+  -ms-overflow-style: hidden;
   -o-background-size: cover;
   background-position: center 0;
 }
@@ -94,9 +94,44 @@ h2 {
   display: inline-block;
   text-align: center;
 }
-.nmap {
-  width: 50%;
-  height: auto;
+
+@media screen and (max-width: 650px) {
+  .nmap {
+    width: 90%;
+    height: auto;
+  }
+  .nmap-text {
+    font-size: 20px;
+    color: #606266;
+  }
+  .pblock {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .nmap {
+    width: 60%;
+    height: auto;
+    position: relative;
+  }
+  .nmap-text {
+    top: -20vw;
+    left: 0;
+    font-size: 3vw;
+    color: #606266;
+    position: relative;
+  }
+  .br1 {
+    display: none;
+  }
+  .pblock {
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+  }
 }
 @media screen and (min-width: 524px) {
   .QR {
@@ -130,20 +165,15 @@ h2 {
   opacity: 0.75;
 }
 
-.pblock {
-  text-align: center;
-  display: inline-block;
-  width: 80%;
-}
 .copyright {
   color: #475669;
   font-size: 12px;
 }
 
 a {
-  color:#606266;
+  color: #606266;
 }
 a:hover {
-  color:#409EFF;
+  color: #409eff;
 }
 </style>
