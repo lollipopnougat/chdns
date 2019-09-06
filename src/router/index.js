@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
-import HelloWorld2 from '@/components/HelloWorld2';
+import Home from '@/components/Home';
+import PageNotFund from '@/components/404';
 import Department from '@/components/Department';
 
 Vue.use(Router);
@@ -15,14 +15,14 @@ export default new Router({
     {
       path: '/Home',
       name: '主页',
-      component: HelloWorld,
+      component: Home,
       meta: { title: '网络安全协会' }
     },
     {
-      path: '/he',
-      name: 'Hello',
-      component: HelloWorld2,
-      meta: { title: '测试页' }
+      path: '/404',
+      name: '404',
+      component: PageNotFund,
+      meta: { title: '404页' }
     },
     {
       path: '/Department',
@@ -32,7 +32,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: '/Home'
+      redirect: '/404'
     }
   ]
 });
