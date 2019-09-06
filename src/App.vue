@@ -195,4 +195,7 @@ a:link {
 a:visited {
   color: #909399;
 }
+.el-message-box {
+  width: auto !important;
+}
 </style>
