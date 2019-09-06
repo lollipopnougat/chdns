@@ -10,9 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: '主页',
-      component: HelloWorld,
-      meta: { title: '网络安全协会' }
+      redirect: '/Home'
     },
     {
       path: '/Home',
@@ -34,7 +32,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: '/he'
+      redirect: '/Home'
     }
   ]
 });

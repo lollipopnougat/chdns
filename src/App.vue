@@ -20,7 +20,7 @@
               <el-dropdown-item>删除</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown> -->
-          <el-menu :default-active="this.$route.path"
+          <el-menu :default-active="this.$route.fullPath"
                    router-mode="horizontal"
                    class="el-menu-demo"
                    mode="horizontal"
@@ -29,10 +29,18 @@
             <el-menu-item index="/Home">首页</el-menu-item>
             <el-submenu index>
               <template slot="title">各部门</template>
-              <el-menu-item index="/Department?d=first">秘书处</el-menu-item>
-              <el-menu-item index="/Department?d=second">竞赛部</el-menu-item>
-              <el-menu-item index="/Department?d=third">宣传部</el-menu-item>
-              <el-menu-item index="/Department?d=fouth">组织部</el-menu-item>
+              <el-menu-item index="/Department?d=first"
+                            route="/Department?d=first"
+                            :hidden="isHid">秘书处</el-menu-item>
+              <el-menu-item index="/Department?d=first"
+                            route="/Department?d=second"
+                            :hidden="isHid">竞赛部</el-menu-item>
+              <el-menu-item index="/Department?d=first"
+                            route="/Department?d=third"
+                            :hidden="isHid">宣传部</el-menu-item>
+              <el-menu-item index="/Department?d=first"
+                            route="/Department?d=fouth"
+                            :hidden="isHid">组织部</el-menu-item>
             </el-submenu>
             <el-menu-item index="3">
               <a href="https://github.com/lollipopnougat/chdns"
@@ -65,6 +73,11 @@
 <script>
 export default {
   name: 'App',
+  data () {
+    return {
+      isHid: false
+    };
+  },
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath);
@@ -74,6 +87,11 @@ export default {
     $route: {
       handler: function (val, oldVal) {
         console.log(val);
+        if (val.path === '/Department') {
+          this.isHid = true;
+        } else {
+          this.isHid = false;
+        }
       }
     }
   }

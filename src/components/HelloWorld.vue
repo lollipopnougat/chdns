@@ -4,41 +4,94 @@
     <h1 class="topmargin">网络安全协会</h1>
     <img src="../assets/nmap.png"
          class="nmap" />
+
+    <h3 class="demonstration">社团职能</h3>
+    <div class="Desctext">
+      <p v-for="item in Desc"
+               :key="item">{{item}}</p>
+    </div>
+    <h3 class="demonstration">社团活动</h3>
+    <div class="Desctext">
+      <p v-for="item in acDesc"
+               :key="item">{{item}}</p>
+    </div>
     <div class="pblock">
       <div class="block">
-        <span class="demonstration">noting</span>
-        <el-carousel height="150px"
-                     :interval="3000"
+        <span class="demonstration"> 协会培训资料 </span><br>
+        <el-carousel height="30vw"
+                     :interval="5000"
                      type="card"
-                     arrow="never">
-          <el-carousel-item v-for="item in 4"
+                     arrow="never"
+                     class="lb">
+          <el-carousel-item>
+            <iframe src="//player.bilibili.com/player.html?aid=37558478&cid=66004602&page=1"
+                    scrolling="no"
+                    border="0"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    class="bili"> </iframe>
+          </el-carousel-item>
+          <el-carousel-item>
+            <iframe src="//player.bilibili.com/player.html?aid=47260362&cid=82754462&page=1"
+                    scrolling="no"
+                    border="0"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    class="bili"> </iframe>
+          </el-carousel-item>
+          <el-carousel-item>
+            <a href="javascript:void(0)" @click="openHtml">
+              <div class="vbox">
+                <h2>HTML入门</h2>
+                <p>什么是HTML</p>
+                <p>HTML发展史</p>
+                <p>结构</p>
+                <p>...</p>
+              </div>
+            </a>
+          </el-carousel-item>
+          <el-carousel-item>
+            <div class="vbox">
+              <h2>正在筹备中</h2>
+              <p>敬请期待</p>
+              <p>...</p>
+            </div>
+          </el-carousel-item>
+          <!--<el-carousel-item v-for="item in 4"
                             :key="item">
             <h3 class="small">{{ item }}</h3>
-          </el-carousel-item>
+          </el-carousel-item>-->
         </el-carousel>
       </div>
     </div>
     <div class="pblock">
       <el-popover placement="top-start"
-                  title="QQ迎新群   微信公众号"
-                  width="520"
+                  title="QQ迎新群"
                   trigger="click">
         <div class="iblock">
           <img src="../assets/QQR.png"
                class="QR" />
+        </div>
+        <el-button slot="reference"
+                   type="primary"
+                   plain>QQ迎新群</el-button>
+      </el-popover>
+      <el-popover placement="top-start"
+                  title="微信公众号"
+                  trigger="click">
+        <div class="iblock">
           <img src="../assets/WQR.png"
                class="QR" /></div>
-        <el-button slot="reference">点击加群或关注微信公众号</el-button>
+        <el-button slot="reference"
+                   type="primary"
+                   plain>微信公众号</el-button>
       </el-popover>
+      <el-button @click="BiliHome"
+                 type="primary"
+                 plain>B站主页</el-button>
     </div>
-    <p>长 </p>
-    <p>大 </p>
-    <p>网 </p>
-    <p>络 </p>
-    <p>安 </p>
-    <p>全 </p>
-    <p>协 </p>
-    <p>会 </p>
     <footer>
       <el-tooltip class="item"
                   effect="dark"
@@ -53,7 +106,21 @@
 
 <script>
 export default {
-  name: 'HelloWorld'
+  name: 'HelloWorld',
+  data () {
+    return {
+      Desc: ['宣传网络安全知识，促进学习网络安全技术', '同大家交流分享知识经验', '与校内社团、校级组织、学院合作', '与校外各大平台合作，培养优秀人才', '活跃校园文化，为加强校园文化建设贡献力量'],
+      acDesc: ['网络安全基础知识培训', '网页设计大赛', '网络技术人才的专项培训', '网络安全攻防大赛', '更多活动敬请期待...']
+    };
+  },
+  methods: {
+    BiliHome () {
+      window.open('https://space.bilibili.com/388857752/');
+    },
+    openHtml () {
+      window.open('https://lollipopnougat.github.io/website-calculator/html/HTML1.html');
+    }
+  }
 };
 </script>
 
@@ -130,7 +197,8 @@ h2 {
   .pblock {
     text-align: center;
     display: inline-block;
-    width: 80%;
+    width: 100%;
+    margin-top: 30px;
   }
 }
 @media screen and (min-width: 524px) {
@@ -156,12 +224,12 @@ h2 {
 }
 
 .el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
+  background-color: #475669;
   opacity: 0.75;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
+  background-color: #475669;
   opacity: 0.75;
 }
 
@@ -175,5 +243,34 @@ a {
 }
 a:hover {
   color: #409eff;
+}
+.bili {
+  height: 100%;
+  width: 100%;
+}
+.demonstration {
+  color: #475669;
+  font-size: 30px;
+  font-weight: 600;
+}
+.lb {
+  margin-top: 20px;
+}
+.vbox {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background: #99a9bf; */
+}
+.vbox h2 {
+  color: #d3dce6;
+}
+.vbox p {
+  color: #99a9bf;
+}
+
+.Desctext {
+  text-align: center;
+  font-size: 20px;
 }
 </style>
