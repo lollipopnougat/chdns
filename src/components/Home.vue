@@ -5,19 +5,19 @@
     <img src="../assets/nmap.png"
          class="nmap" />
 
-    <h3 class="demonstration">社团职能</h3>
+    <h3 class="demonstration">协会职能</h3>
     <div class="Desctext">
       <p v-for="item in Desc"
-               :key="item">{{item}}</p>
+         :key="item">{{item}}</p>
     </div>
-    <h3 class="demonstration">社团活动</h3>
+    <h3 class="demonstration">协会特色活动</h3>
     <div class="Desctext">
       <p v-for="item in acDesc"
-               :key="item">{{item}}</p>
+         :key="item">{{item}}</p>
     </div>
     <div class="pblock">
       <div class="block">
-        <span class="demonstration"> 协会培训资料 </span><br>
+        <span class="demonstration">协会培训资料</span><br>
         <el-carousel height="30vw"
                      :interval="5000"
                      type="card"
@@ -42,7 +42,8 @@
                     class="bili"> </iframe>
           </el-carousel-item>
           <el-carousel-item>
-            <a href="javascript:void(0)" @click="openHtml">
+            <a href="javascript:void(0)"
+               @click="openHtml">
               <div class="vbox">
                 <h2>HTML入门</h2>
                 <p>什么是HTML</p>

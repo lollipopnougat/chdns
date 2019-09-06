@@ -42,9 +42,9 @@
                             route="/Department?d=fouth"
                             :hidden="isHid">组织部</el-menu-item>
             </el-submenu>
-            <el-menu-item index="3">
-              <a href="https://github.com/lollipopnougat/chdns"
-                 target="_blank">
+            <el-menu-item index="/"
+                          @click="openGithub">
+              <a href="javascript:void(0);">
                 <svg aria-labelledby="simpleicons-github-dark-icon"
                      lang=""
                      role="img"
@@ -81,6 +81,25 @@ export default {
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath);
+    },
+    openGithub () {
+      const h = this.$createElement;
+      this.$confirm('即将打开Github, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$message({
+          type: 'success',
+          message: '打开成功!'
+        });
+        window.open('https://github.com/lollipopnougat/chdns');
+      }).catch(() => {
+        this.$notify({
+          title: '已取消',
+          message: h('i', { style: 'color: teal' }, '似乎您对Github不感兴趣呢')
+        });
+      });
     }
   },
   watch: {
