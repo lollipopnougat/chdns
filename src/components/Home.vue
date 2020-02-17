@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+
     <h2>长安大学</h2>
     <h1 class="topmargin">网络安全协会</h1>
     <img src="../assets/nmap.png"
@@ -24,7 +25,48 @@
                      arrow="never"
                      class="lb">
           <el-carousel-item>
-            <iframe src="//player.bilibili.com/player.html?aid=37558478&cid=66004602&page=1"
+            <iframe src="//player.bilibili.com/player.html?aid=68628881&cid=118940535&page=1"
+                    crolling="no"
+                    border="0"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    class="bili">
+            </iframe>
+          </el-carousel-item>
+          <el-carousel-item>
+            <iframe src="//player.bilibili.com/player.html?aid=68637885&cid=118954416&page=1"
+                    scrolling="no"
+                    border="0"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    class="bili">
+            </iframe>
+          </el-carousel-item>
+          <el-carousel-item>
+            <iframe src="//player.bilibili.com/player.html?aid=71714798&cid=124272737&page=1"
+                    scrolling="no"
+                    border="0"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    class="bili">
+            </iframe>
+          </el-carousel-item>
+
+          <el-carousel-item>
+            <iframe src="//player.bilibili.com/player.html?aid=71721428&cid=124280053&page=1"
+                    scrolling="no"
+                    border="0"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    class="bili">
+            </iframe>
+          </el-carousel-item>
+          <el-carousel-item>
+            <iframe src="//player.bilibili.com/player.html?aid=71922013&cid=124620885&page=1"
                     scrolling="no"
                     border="0"
                     frameborder="no"
@@ -33,25 +75,13 @@
                     class="bili"> </iframe>
           </el-carousel-item>
           <el-carousel-item>
-            <iframe src="//player.bilibili.com/player.html?aid=47260362&cid=82754462&page=1"
+            <iframe src="//player.bilibili.com/player.html?aid=73264847&cid=125321163&page=1"
                     scrolling="no"
                     border="0"
                     frameborder="no"
                     framespacing="0"
                     allowfullscreen="true"
                     class="bili"> </iframe>
-          </el-carousel-item>
-          <el-carousel-item>
-            <a href="javascript:void(0)"
-               @click="openHtml">
-              <div class="vbox">
-                <h2>HTML入门</h2>
-                <p>什么是HTML</p>
-                <p>HTML发展史</p>
-                <p>结构</p>
-                <p>...</p>
-              </div>
-            </a>
           </el-carousel-item>
           <el-carousel-item>
             <div class="vbox">
@@ -69,7 +99,7 @@
     </div>
     <div class="pblock">
       <el-popover placement="top-start"
-                  title="QQ迎新群"
+                  title="QQ交流群"
                   trigger="click">
         <div class="iblock">
           <img src="../assets/QQR.png"
@@ -77,14 +107,15 @@
         </div>
         <el-button slot="reference"
                    type="primary"
-                   plain>QQ迎新群</el-button>
+                   plain>QQ交流群</el-button>
       </el-popover>
       <el-popover placement="top-start"
                   title="微信公众号"
                   trigger="click">
         <div class="iblock">
           <img src="../assets/WQR.png"
-               class="QR" /></div>
+               class="QR" />
+        </div>
         <el-button slot="reference"
                    type="primary"
                    plain>微信公众号</el-button>
@@ -96,7 +127,7 @@
     <footer>
       <el-tooltip class="item"
                   effect="dark"
-                  content="作者是lnp"
+                  content="页面作者: lnp"
                   placement="top-start">
         <span class="copyright"> 2019 &copy; 长安大学网络安全协会 Powered by <a href="https://vuejs.org/">Vue.js</a> & <a href="https://element.eleme.io/">Element UI</a></span>
 

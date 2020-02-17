@@ -3,7 +3,9 @@
     <el-container>
       <el-header>
         <el-container class="headerd">
-          <a class="headlink">
+          <a class="headlink"
+             href="javascript:void(0)"
+             @click="gotoHome">
             <img src="./assets/chdns-logo.png"
                  class="logo" />
             <img src="./assets/chdns-logos.png"
@@ -67,6 +69,7 @@
         <router-view />
       </el-main>
     </el-container>
+
   </div>
 </template>
 
@@ -100,6 +103,9 @@ export default {
           message: h('i', { style: 'color: teal' }, '似乎您对Github不感兴趣呢')
         });
       });
+    },
+    gotoHome () {
+      location.href = '/';
     }
   },
   watch: {
