@@ -190,6 +190,14 @@ export default {
   padding: 0 !important;
 }
 
+.el-submenu.is-active {
+  height: 100%;
+}
+.el-menu-item.is-active {
+  color: #409eff;
+  height: 100%;
+}
+
 a:hover {
   color: #409eff;
   text-decoration: underline;
